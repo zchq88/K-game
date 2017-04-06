@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>game</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body class="bg">
+    <div class="main">
+        <div  id="main" class="k_tu"></div>
+        <div id="start" onclick="start()"><img src="K/1_start.png" height="75" width="75"></div>
+        <span id="kyje">0</span>
+        <span id="fdsy">0</span>
+        <span id="zqys">0</span>
+        <span id="bcl">0%</span>
+        <span id="buyNum">0</span>
+        <div id="buy_init" onclick="buy_init()"></div>
+        <div id="sell_init" onclick="sell_init()"></div>
+        <div id="add_ss" onclick="add_ss()"></div>
+        <div id="sub_ss" onclick="sub_ss()"></div>
+        <div id="xd" onclick="buy()">
+            <img id="buyimg" src="K/9_buy.png" height="30" width="72">
+            <img id="sellimg" src="K/9_sell.png" height="30" width="72" style="display:none">
+        </div>
+    </div>
+
+    <!--    <div class="am-g am-g-collapse am-padding-xs">
+        <label class="am-u-sm-4 ">买价：<span id="bid">0</span></label>
+        <label class="am-u-sm-4 ">最高：<span id="h">0</span></label>
+        <label class="am-u-sm-4 ">开盘：<span id="o">0</span></label>
+        <label class="am-u-sm-4 ">卖价：<span id="ask">0</span></label>
+        <label class="am-u-sm-4 ">最低：<span id="l">0</span></label>
+        <label class="am-u-sm-4 ">收盘：<span id="c">0</span></label>
+    </div>-->
+
+    <!--    <div class="am-g">
+        <button class="am-btn am-u-sm-6 am-btn-danger" onclick="buy_init()">买</button>
+        <button class="am-btn am-u-sm-6 am-btn-success" onclick="sell_init()">卖</button>
+    </div>-->
+    <div class="div_table">
+        <div class="am-scrollable-vertical div_t">
+            <table class="am-table table am-table-compact" id="buy_table">
+                <tr>
+                    <th colspan="3" align="center">买</th>
+                </tr>
+                <tr>
+                    <td>单号</td>
+                    <td>数量</td>
+                    <td>成交价</td>
+                </tr>
+            </table>
+            <table class="am-table table am-table-compact" id="sell_table">
+                <tr>
+                    <th colspan="3" align="center">卖</th>
+                </tr>
+                <tr>
+                    <td>单号</td>
+                    <td>数量</td>
+                    <td class="aaa">成交价</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">确认下单数</div>
+            <div class="am-modal-bd">
+                可下手数<span id="kxss">0</span> 数量：
+                <span id="buyNum">0</span>
+                <button class="am-btn" onclick="add_ss()">+</button>
+                <button class="am-btn" onclick="sub_ss()">-</button>
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="echarts-all.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
